@@ -3,9 +3,9 @@ module.exports = function check(str, bracketsConfig) {
 
   while ( true ) {
     check = false;
-    bracketsConfig.forEach(function(config){
+    bracketsConfig.forEach(config => {
       substr = config.join('');
-      if ( str.indexOf( substr ) > -1 ) {
+      if ( str.includes( substr ) ) {
         str = str.replace(substr, '');
         check = true;
       }
